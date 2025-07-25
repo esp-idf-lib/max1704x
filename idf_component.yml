@@ -18,7 +18,6 @@ dependencies:
     version: "*"
   esp-idf-lib/esp_idf_lib_helpers:
     version: "*"
-maintainers: Joshua Butler (@shuki25) <josh.butler929@gmail.com>
 url: https://github.com/esp-idf-lib/core
 repository: https://github.com/esp-idf-lib/max1704x
 documentation: https://esp-idf-lib.github.io/max1704x/
@@ -27,3 +26,5 @@ discussion: https://github.com/esp-idf-lib/core/discussions
 files:
   exclude:
     - docs/**/*
+maintainers:
+  - Joshua Butler (@shuki25) <josh.butler929@gmail.com>
