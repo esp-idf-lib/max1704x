@@ -11,7 +11,7 @@ Driver for MAX17043/MAX17044/MAX17048/MAX17049 battery fuel gauge.
 ## Installation
 
 ```sh
-idf.py add-dependency "esp-idf-lib/max1704x^0.9.0
+idf.py add-dependency esp-idf-lib/max1704x^0.9.0
 ```
 
 ## Support
