@@ -5,7 +5,7 @@
 #include <esp_err.h>
 #include <esp_log.h>
 
-static char *TAG = "main";
+static const char *TAG = "main";
 
 void test(void *pvParameters)
 {
