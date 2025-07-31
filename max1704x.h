@@ -31,7 +31,7 @@
  * @{
  *
  * ESP-IDF driver for MAX17043/MAX17044/MAX17048/MAX17049 battery fuel gauge
- * 
+ *
  * Copyright (c) 2022 Joshua Butler, MD, MHI <josh.butler929@gmail.com>
  *
  * BSD Licensed as described in the file LICENSE
@@ -77,7 +77,7 @@ typedef struct
 /**
  * MAX1704X configuration structure
  */
-typedef struct 
+typedef struct
 {
     uint8_t rcomp;                  //!< RCOMP register value - default 0x97
     bool sleep_mode;                //!< Sleep mode - set to true to enter sleep mode
@@ -120,7 +120,7 @@ esp_err_t max1704x_free_desc(max1704x_t *dev);
 
 /**
  * @brief Quickstart battery fuel gauge
- * 
+ *
  * @param dev Device descriptor
  * @return `ESP_OK` on success
  */
@@ -128,7 +128,7 @@ esp_err_t max1704x_quickstart(max1704x_t *dev);
 
 /**
  * @brief Get battery voltage
- * 
+ *
  * @param dev Device descriptor
  * @param voltage Battery voltage
  * @return `ESP_OK` on success
@@ -137,7 +137,7 @@ esp_err_t max1704x_get_voltage(max1704x_t *dev, float *voltage);
 
 /**
  * @brief Get state of charge
- * 
+ *
  * @param dev Device descriptor
  * @param soc State of charge
  * @return `ESP_OK` on success
@@ -146,7 +146,7 @@ esp_err_t max1704x_get_soc(max1704x_t *dev, float *soc);
 
 /**
  * @brief Get rate of battery charge or discharge
- * 
+ *
  * @param dev Device descriptor
  * @param crate Rate of charge or discharge
  * @return `ESP_OK` on success
@@ -155,7 +155,7 @@ esp_err_t max1704x_get_crate(max1704x_t *dev, float *crate);
 
 /**
  * @brief Get the production version of the chip
- * 
+ *
  * @param dev Device descriptor
  * @param version Production version
  * @return `ESP_OK` on success
@@ -164,7 +164,7 @@ esp_err_t max1704x_get_version(max1704x_t *dev, uint16_t *version);
 
 /**
  * @brief Get the configuration register
- * 
+ *
  * @param dev Device descriptor
  * @return `ESP_OK` on success
  */
@@ -172,7 +172,7 @@ esp_err_t max1704x_get_config(max1704x_t *dev);
 
 /**
  * @brief Set the configuration register
- * 
+ *
  * @param dev Device descriptor
  * @param config Configuration register
  * @return `ESP_OK` on success
@@ -181,7 +181,7 @@ esp_err_t max1704x_set_config(max1704x_t *dev, max1704x_config_t *config);
 
 /**
  * @brief Get the status register
- * 
+ *
  * @param dev Device descriptor
  * @return `ESP_OK` on success
  */
@@ -189,11 +189,11 @@ esp_err_t max1704x_get_status(max1704x_t *dev);
 
 /**
  * @brief Set the status register
- * 
+ *
  * @param dev Device descriptor
  * @param status Status register
  * @return `ESP_OK` on success
- * 
+ *
  * @note Use this function to clear alert flags after servicing the alert
  */
 esp_err_t max1704x_set_status(max1704x_t *dev, max1704x_status_t *status);

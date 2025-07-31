@@ -17,7 +17,7 @@ void test(void *pvParameters)
     float voltage = 0;
     float soc_percent = 0;
     float rate_change = 0;
-    
+
     /**
      * Set up I2C bus to communicate with MAX1704X
      */
@@ -31,7 +31,7 @@ void test(void *pvParameters)
 
     /**
      * Get MAX1704X configuration
-     */ 
+     */
     ESP_LOGI(TAG, "--- MAX1704X config register ---");
     ESP_ERROR_CHECK(max1704x_get_config(&dev));
     ESP_LOGI(TAG, "Alert Status: %d", dev.config.alert_status);
@@ -94,26 +94,29 @@ void test(void *pvParameters)
     {
         r = max1704x_get_voltage(&dev, &voltage);
 
-        if (r == ESP_OK) {
+        if (r == ESP_OK)
+        {
             ESP_LOGI(TAG, "Voltage: %.2fV", voltage);
         }
         else
             ESP_LOGI(TAG, "Error %d: %s", r, esp_err_to_name(r));
 
         r = max1704x_get_soc(&dev, &soc_percent);
-        if (r == ESP_OK) {
+        if (r == ESP_OK)
+        {
             ESP_LOGI(TAG, "SOC: %.2f%%", soc_percent);
         }
         else
             ESP_LOGI(TAG, "Error %d: %s", r, esp_err_to_name(r));
 
         r = max1704x_get_crate(&dev, &rate_change);
-        if (r == ESP_OK) {
+        if (r == ESP_OK)
+        {
             ESP_LOGI(TAG, "SOC rate of change: %.2f%%", rate_change);
         }
         else
             ESP_LOGI(TAG, "Error %d: %s", r, esp_err_to_name(r));
-        
+
         printf("\n");
         vTaskDelay(pdMS_TO_TICKS(5000));
     }
