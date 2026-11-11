@@ -1,7 +1,7 @@
 ---
 version: 0.9.9
 description: Driver for MAX17043/MAX17044/MAX17048/MAX17049 battery fuel gauge
-license: BSD-3
+license: BSD-3-Clause
 dependencies:
   esp-idf-lib/i2cdev:
     version: "*"
